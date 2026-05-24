@@ -1,0 +1,22 @@
+---
+layout: main.liquid
+tags: posts
+date: git Created
+permalink: "/{{ page.date | date: '%Y/%m/%d/' }}{{ title | slugify }}/"
+author: Danny
+stylesheet: /css/post.css
+---
+<article>
+  <h3>{{ title }}</h3>
+  <div class="inline-data-rule">
+    <small>{{ page.date | date: '%m-%d-%Y' }}</small>
+    <hr />
+    {% for tag in tags %}
+      {% if tag != "posts" %}
+        <small>{{ tag }}</small>
+      {% endif %} 
+    {% endfor %}
+  </div>
+  {{ content }}
+</article>
+

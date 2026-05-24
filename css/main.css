@@ -1,0 +1,63 @@
+@import "base.css";
+@import "centeredbody.css";
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.container {
+  flex: 1;
+}
+
+.latest {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.tech {
+  border-left: 6px solid var(--primary-tech);
+}
+
+.art {
+  border-left: 6px solid var(--primary-art);
+}
+
+.esoterica {
+  border-left: 6px solid var(--primary-esoterica);
+}
+
+.now {
+  border-left: 6px solid var(--primary-now);
+}
+
+.tech p {
+  color: var(--primary-tech);
+  /* border: 2px solid var(--primary-tech); */
+}
+
+.esoterica p {
+  color: var(--primary-esoterica);
+  /* border: 2px solid var(--primary-esoterica); */
+}
+
+.art p {
+  color: var(--primary-art);
+  /* border: 2px solid var(--primary-art); */
+}
+
+.now p {
+  color: var(--primary-now);
+  /* border: 2px solid var(--primary-now); */
+}
+
+.latest p {
+  /* text-decoration: underline; */
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 6px double var(--border-color);
+  padding: 6px;
+  background: var(--scanlines);
+}
+
+header h6 {
+  margin: 0;
+  color: var(--primary)
+}
+
+nav a {
+  display: inline-block;
+  color: var(--primary-text);
+  padding: 4px 12px;
+  border: 1px solid var(--border-color); 
+}
+
+.nav-tech:hover, .nav-tech[aria-current] {
+  color: var(--primary-tech);
+  border: 1px solid var(--primary-tech);
+}
+
+.nav-esoterica:hover, .nav-esoterica[aria-current] {
+  color: var(--primary-esoterica);
+  border: 1px solid var(--primary-esoterica);
+}
+
+.nav-art:hover, .nav-art[aria-current] {
+  color: var(--primary-art);
+  border: 1px solid var(--primary-art);
+}
+
+.nav-now:hover, .nav-now[aria-current] {
+  color: var(--primary-now);
+  border: 1px solid var(--primary-now);
+}
+
+nav a:hover {
+  color: var(--primary-text);
+  border: 1px solid transparent;
+}

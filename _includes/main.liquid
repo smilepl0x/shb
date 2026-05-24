@@ -1,0 +1,45 @@
+---
+  mainTitle: shb
+  tagline: Blog, portfolio, social stuff, etc.
+  owner: Danny
+  licenseBlurb: Written works licensed CC BY-SA 4.0 
+---
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ stylesheet }}" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/"><h6>{{ mainTitle }}</h6></a>
+        <small>{{ tagline }}</small>
+      </div>
+      <nav>
+        <div>
+          {% for _topic in collections.topics %}
+            {% assign nameLower = _topic.name | downcase %}
+            <a
+              {% if topic == nameLower %}
+                aria-current="page"
+              {% endif %}
+              class="nav-{{ nameLower }}"
+              href="{{ _topic.url }}">
+                <small>{{ _topic.name }}</small>
+            </a>
+          {% endfor %}
+        </div>
+      </nav>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <div>
+        <p><small>{{ owner }}</small></p>
+        <hr />
+        <p><small>{{ licenseBlurb }}</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

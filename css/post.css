@@ -1,0 +1,14 @@
+@import "base.css";
+
+.inline-data-rule {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--primary);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.inline-data-rule hr {
+  flex-grow: 1;
+}
