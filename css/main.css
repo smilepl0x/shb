@@ -7,6 +7,13 @@
   gap: 24px;
 }
 
+@media (max-width: 600px) {
+  .container-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 .container {
   flex: 1;
 }

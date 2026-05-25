@@ -7,6 +7,13 @@ header {
   background: var(--scanlines);
 }
 
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 header h6 {
   margin: 0;
   color: var(--primary)
