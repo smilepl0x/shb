@@ -7,7 +7,7 @@
   gap: 24px;
 }
 
-@media (max-width: 600px) {
+@media (orientation: portrait) {
   .container-wrapper {
     flex-direction: column;
     gap: 12px;

@@ -50,10 +50,13 @@ body {
   box-sizing: border-box;
 }
 
+@media (orientation: portait) {
+  max-width: 90em;
+}
+
 @media (max-width: 684px) {
   body {
     font-size: 1.53rem;
-    max-width: 90em;
   }
 }
 @media (max-width: 382px) {

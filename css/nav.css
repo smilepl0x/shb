@@ -7,7 +7,7 @@ header {
   background: var(--scanlines);
 }
 
-@media (max-width: 600px) {
+@media (orientation: portrait) {
   header {
     flex-direction: column;
     gap: 12px;
