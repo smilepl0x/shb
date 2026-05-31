@@ -1,40 +1,44 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default async function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("css/*")
-  eleventyConfig.addPassthroughCopy("fonts/*")
+  eleventyConfig.addPassthroughCopy("css/*");
+  eleventyConfig.addPassthroughCopy("fonts/*");
   eleventyConfig.addCollection("topics", async () => {
     return [
       {
         name: "Tech",
-        url: "/tech"
+        url: "/tech",
       },
       {
         name: "Esoterica",
-        url: "/esoterica"
+        url: "/esoterica",
       },
       {
         name: "Art",
-        url: "/art"
+        url: "/art",
       },
       {
         name: "Now",
-        url: "/now"
-      }
-    ]
-  })
+        url: "/now",
+      },
+    ];
+  });
   eleventyConfig.addCollection("links", async () => {
     return [
       {
         name: "Github",
-        url: "https://www.github.com/smilepl0x"
+        url: "https://www.github.com/smilepl0x",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/danny-faught"
-      }
-    ]
-  })
+        url: "https://www.linkedin.com/in/danny-faught",
+      },
+      {
+        name: "RSS",
+        url: "/feed.xml",
+      },
+    ];
+  });
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed.xml",
@@ -50,7 +54,7 @@ export default async function (eleventyConfig) {
       author: {
         name: "Danny",
         email: "",
-      }
-    }
-  })
-};
+      },
+    },
+  });
+}

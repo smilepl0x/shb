@@ -6,7 +6,7 @@ stylesheet: css/main.css
   <div class="container">
     <h5>Latest</h5>
     <hr />
-    {% for post in collections.posts %}
+    {% for post in collections.posts reversed %}
       <div class="latest {{ post.data.topic }}">
         <p><small>{{ post.data.topic }}</small></p>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
