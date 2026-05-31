@@ -1,3 +1,5 @@
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css/*")
   eleventyConfig.addPassthroughCopy("fonts/*")
@@ -32,5 +34,23 @@ export default async function (eleventyConfig) {
         url: "https://www.linkedin.com/in/danny-faught"
       }
     ]
+  })
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts",
+      limit: 20,
+    },
+    metadata: {
+      language: "en",
+      title: "shb",
+      subtitle: "Blog, portfolio, social stuff, etc.",
+      base: "https://shibby.tech/",
+      author: {
+        name: "Danny",
+        email: "",
+      }
+    }
   })
 };
